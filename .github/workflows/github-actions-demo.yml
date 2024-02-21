@@ -28,4 +28,7 @@ jobs:
       - name: chmod command execute script
         run: chmod +x mvnw
 
+      - name: run tests
+        run: ./mvnw -q test
+
         
