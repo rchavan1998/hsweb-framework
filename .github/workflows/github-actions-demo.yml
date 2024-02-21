@@ -24,5 +24,8 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '8'
+      
+      - name: chmod command execute script
+        run: chmod +x mvnw
 
         
