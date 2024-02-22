@@ -29,6 +29,7 @@ jobs:
         run: chmod +x mvnw
 
       - name: run tests
+        run: ./mvnw wrapper --clean
         run: ./mvnw -q test -Dmaven=3.9.6
 
       - name: code coverage upload
