@@ -29,7 +29,7 @@ jobs:
         run: chmod +x mvnw
 
       - name: run tests
-        run: ./mvnw -q test -Dmaven=3.9.5
+        run: ./mvnw -q test -Dmaven=3.9.6
 
       - name: code coverage upload
         if: success()
