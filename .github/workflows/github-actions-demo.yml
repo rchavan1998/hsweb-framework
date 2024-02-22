@@ -28,12 +28,14 @@ jobs:
       - name: chmod command execute script
         run: chmod +x mvnw
 
-      # - name: run tests
-      #   run: ./mvnw -q test -Dmaven=3.6.3
+      - name: run tests
+        run: ./mvnw -q test -Dmaven=3.9.6
 
-      - name: Upload code coverage
+      - name: code coverage upload
         if: success()
         run: bash <(curl -s https://codecov.io/bash)
+
+      
 
 
       
