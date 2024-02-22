@@ -35,7 +35,14 @@ jobs:
         if: success()
         run: bash <(curl -s https://codecov.io/bash)
 
-      
+      - name: cached maven
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-m2
 
 
       
