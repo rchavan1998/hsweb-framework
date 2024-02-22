@@ -29,6 +29,7 @@ jobs:
         run: chmod +x mvnw
 
       - name: run tests
-        run: ./mvnw -q test
+        run: ./mvnw -q test -Dmaven=3.6.3
+
 
         
