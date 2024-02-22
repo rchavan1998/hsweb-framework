@@ -28,8 +28,10 @@ jobs:
       - name: chmod command execute script
         run: chmod +x mvnw
 
-      - name: run tests
+      - name: run wrapper clean
         run: ./mvnw wrapper --clean
+      
+      - name: run tests
         run: ./mvnw -q test -Dmaven=3.9.6
 
       - name: code coverage upload
