@@ -31,9 +31,6 @@ jobs:
       - name: Run Maven Wrapper to update or download
         run: ./mvnw -N io.takari:maven:wrapper -Dmaven=3.9.6
 
-      - name: Set executable permissions for mvn
-        run: chmod +x .mvn/wrapper/dists/apache-maven-3.9.6-bin/2p3i4d0ctslqhqbi931o6l1k27/apache-maven-3.9.6/bin/mvn
-
 
       - name: code coverage upload
         if: success()
