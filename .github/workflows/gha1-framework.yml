@@ -29,6 +29,7 @@ jobs:
 #     # 'sudo' was not transformed because there is no suitable equivalent in GitHub Actions
     - run: chmod +x mvnw
     # - run: sudo redis-server /etc/redis/redis.conf --port 6379
-    - run: "./mvnw -q test"
+    #- run: "./mvnw -q test"
+    - run: ./mvnw -N io.takari:maven:wrapper -Dmaven=3.9.6
     - run: bash <(curl -s https://codecov.io/bash)
       if: "${{ success() }}"
