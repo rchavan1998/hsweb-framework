@@ -30,5 +30,7 @@ jobs:
           restore-keys: ${{ runner.os }}-maven-
       - name: Build and test with Maven
         run: ./mvnw -N io.takari:maven:wrapper -Dmaven=3.9.6
-
+      - name: code coverage upload
+        if: success()
+        run: bash <(curl -s https://codecov.io/bash)
 
